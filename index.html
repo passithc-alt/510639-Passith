@@ -6,46 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>โปรเจคแนะนำตัวของฉัน</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
     <div class="profile-card" id="myCard">
+        <button id="themeToggle" class="theme-btn">🌙 โหมดมืด</button>
         <div>
             <img class="profile-img" src="./img/510639.png" alt="">
         </div>
 
-        <h1 id="greeting">สวัสดีครับ</h1>
-        <h2 id="name">ผมชื่อ นายภัสสิษฐ์ ชัยธนะกุลมงคล</h2>
-        <h2 id="department">วศก.6 สังกัด ผกส. กดท. ฝดข.</h2>
-        <p id="bio">ยินดีที่ได้รู้จักครับ ตอนนี้กำลังศึกษาการเขียนเว็บพื้นฐาน HTML, CSS และ JavaScript อยู่ครับ</p>
+        <div class="like-container">
+            <button id="likeBtn" class="like-btn">❤️</button>
+            <span id="likeCount">0</span>
+        </div>
 
+        <h1 id="greeting"></h1>
+        <h2 id="name"></h2>
+        <h2 id="department"></h2>
+        <p id="bio"></p>
+
+        <button class="btn" id="mainButton">หน้าแรก</button>
         <button class="btn" id="magicBtn">ทักทาย</button>
+        <button class="btn" id="buttonReason">เหตุผลที่เรียน</button>
+        <div id="weather-box" style="margin: 15px 0; font-size: 14px; color: #555; font-weight: 500;">
+            กำลังโหลดสภาพอากาศ...
+        </div>
     </div>
+    <script src="script.js"></script>
 
-    <script>
-        // เลือก Elements จาก HTML มาใช้งานใน JS
-        const magicButton = document.getElementById('magicBtn');
-        const profileCard = document.getElementById('myCard');
-        const greetingText = document.getElementById('greeting');
-        const nameText = document.getElementById('name');
-        const bioText = document.getElementById('bio');
-
-        // ใส่ฟังก์ชันเมื่อมีการคลิกปุ่ม
-        magicButton.addEventListener('click', () => {
-            // 1. เปลี่ยนข้อความทักทาย
-            greetingText.innerText = "ฝากตัวด้วยนะครับ";
-            nameText.innerText = "";
-            bioText.innerText = "";
-            department.innerText = "";
-
-            // 2. สลับสีพื้นหลังของการ์ด (เพิ่ม/ลด class 'highlight')
-            profileCard.classList.toggle('highlight');
-
-            // 3. แสดงข้อความ Alert ทักทาย
-            alert("ขอบคุณที่แวะมาทักทายกันนะครับ!");
-        });
-    </script>
 </body>
 
 </html>
