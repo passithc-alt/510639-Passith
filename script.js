@@ -86,7 +86,7 @@ fetch(url)
         // นำภาพไอคอนและรายละเอียดข้อมูลสภาพอากาศไปแสดงผลใน HTML (weatherBox)
         weatherBox.innerHTML = `
             <img src="https://openweathermap.org/img/wn/${weatherInfo.icon}.png" alt="weather icon" style="vertical-align: middle; width: 40px;">
-            <span>ตอนนี้ที่ กรุวเทพฯ อุณหภูมิ ${temp}°C (${weatherInfo.desc})</span>
+            <span>ตอนนี้ที่ กรุงเทพฯ อุณหภูมิ ${temp}°C (${weatherInfo.desc})</span>
         `;
     })
 
